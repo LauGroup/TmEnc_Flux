@@ -1,0 +1,10 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+loadamberparams frcmod.ions1lm_1264_tip3p
+loadamberparams frcmod.ions234lm_1264_tip3p
+mol = loadpdb P53_M18_NCS_real_space_refined_BIOMT_single_5x_pore_Zalign_proc.pdb 
+solvatebox mol TIP3PBOX 20  
+addionsrand mol TB 93 Cl- 219 4
+savepdb mol output_ions.pdb
+saveamberparm mol P53_ions.prmtop P53_ions.crd
+quit

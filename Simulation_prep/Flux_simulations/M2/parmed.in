@@ -1,0 +1,9 @@
+parm M2_ions.prmtop
+loadCoordinates M2_ions.crd
+setOverwrite True
+printLJMatrix @TB
+printLJMatrix @Cl-
+add12_6_4 "@Cl-,TB" watermodel TIP3P
+printLJMatrix @TB
+printLJMatrix @Cl-
+outparm M2_ions_1264.prmtop

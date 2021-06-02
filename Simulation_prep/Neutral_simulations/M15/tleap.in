@@ -1,0 +1,8 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+mol = loadpdb  P52_M15_NCS_real_space_refined_13_BIOMT_single_5x_pore_Zalign_proc.pdb
+solvatebox mol TIP3PBOX 20  
+addions mol Na+ 0
+savepdb mol output.pdb
+saveamberparm mol P52.prmtop P52.crd
+quit

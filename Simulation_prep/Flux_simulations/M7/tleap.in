@@ -1,0 +1,10 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+loadamberparams frcmod.ions1lm_1264_tip3p
+loadamberparams frcmod.ions234lm_1264_tip3p
+mol = loadpdb M7_BioMT_Refine_17_single_5x_pore_Zalign_proc.pdb 
+solvatebox mol TIP3PBOX 20  
+addionsrand mol TB 89  Cl- 197 
+savepdb mol output_ions.pdb
+saveamberparm mol M7_ions.prmtop M7_ions.crd
+quit

@@ -1,0 +1,40 @@
+Heat polymer to target temp
+ &cntrl
+  imin=0,         ! no min
+  ntx=1,          ! do not read velocities in
+  irest=0,        ! no restart run a new sim
+  ntxo=2,         ! write traj in NETCDF format
+  ntpr=5000,	  ! print to logfile every 5k steps
+  ntwr=5000,      ! write restart every 5k steps
+  iwrap=1,        ! wrap into primary box
+  ntwx=5000,      ! write traj every 5k steps
+  ntwv=0,         ! do not write velocities
+  nstlim=1000000, ! 1M steps
+  dt=0.002,       ! 0.2 fs ts * 1M steps = 2ns
+  ntt=3,          ! langevin dynamics
+  gamma_ln=3.0,   ! collision frequency
+  tempi=0.0,      ! initial temp
+  temp0=300.0,    ! target temp
+  ntp=1,          ! isotropic barostat
+  barostat=1      ! berendsen barostat
+  pres0=1.0       ! 1 bar
+  taup=2.0        ! coupling constant = 2.0 
+  cut=8.0,        ! PME cutoff
+  ntb=2,          ! NPT
+  ntc=2,          ! constrain H-bonds with shake
+  ntf=2,          ! do not evaluate H-bonds force contribution
+  ig=-1,          ! random seeding
+  nmropt=1,       ! activate moving constraints (here for temp)
+!  plumed=1,       ! activate plumed
+!  plumedfile='plumed.dat' ! spec plumed file for input
+  ntr=1,           ! activate positions restraints
+  restraintmask=':1-1320@CA', ! restrain protein atoms
+  restraint_wt=10, ! restraint weight for protein (7 kcal/mol/A^2 == 30 kcal/mol/A^2)      
+ /
+&wt type='TEMP0', istep1=0, istep2=500000, value1=0.0, value2=300.0 /
+&wt type='TEMP0', istep1=500001, istep2=1000000, value1=300.0, value2=300.0 /
+&wt type='END' /
+
+! final block heats from 0-300K over first 1 ns (500k steps)
+! then holds steady at 300K for 1 ns (500k steps)
+~
