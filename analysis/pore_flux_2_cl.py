@@ -6,8 +6,8 @@ from MDAnalysis.analysis import distances
 from MDAnalysis.lib.log import ProgressBar
 
 
-iontype="Cl-"
-variant="M2"
+
+
 ## we are looking for transitions through the pore:
 # 1. assign a cylinder whose center plane is the center of the pore
 # 2. assign each ion a state
@@ -135,10 +135,10 @@ twiddle_z_pore = -3.0 #shift pore down slightly
 
 print("ENCAPSULIN_FLUX_COUNTER\n\n")
 mda.start_logging()
-u = mda.Universe(f"no_water.{variant}_ions_1264.prmtop", f"{variant}_ions_1264_combined_imaged_full_no_water.nc")
+u = mda.Universe("no_water.M29_ions_1264.prmtop", "M29_ions_1264_combined_imaged_full_no_water.nc")
 
 #select all the F180s
-center_pore_ag = u.select_atoms("(resid 180 438 696 954 1212) and name CA")
+center_pore_ag = u.select_atoms("(resid 180 437 694 951 1208) and name CA")
 assert(len(set(center_pore_ag.resnames)) == 1)
 assert(list(set(center_pore_ag.resnames))[0] == "PHE")
 
@@ -151,7 +151,7 @@ center_pore_com = center_pore_ag.center_of_mass()
 print(f"Pore COM is  {[center_pore_com[0], center_pore_com[1], center_pore_com[2] + twiddle_z_pore]}\nSetting cyl_center to this value\n")
 
 # select all the ions
-ion_ag = u.select_atoms(f"resname {iontype}")
+ion_ag = u.select_atoms("resname Cl-")
 # check that ions are atomic
 assert(ion_ag.n_atoms == ion_ag.n_residues)
 print(f"Number of ions is {len(ion_ag)}\n")
