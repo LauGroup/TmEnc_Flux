@@ -1,0 +1,30 @@
+NPT production initial
+ &cntrl
+  imin=0,         ! no min
+  ntx=5,          ! read velocities in
+  irest=0,        ! no restart run as new sim
+  ntxo=2,         ! write traj in NETCDF format
+  ntpr=50000,	  ! print to logfile every 50k steps
+  ntwr=50000,     ! write restart every 50k steps
+  iwrap=1,        ! wrap into primary box
+  ntwx=50000,     ! write traj every 50k steps
+  ntwv=0,         ! do not write velocities
+  nstlim=5000000, ! 50M steps
+  dt=0.002,       ! 0.2 fs ts * 5M steps = 10ns
+  ntt=3,          ! langevin dynamics
+  gamma_ln=3.0,   ! collision frequency
+  temp0=300.0,    ! target temp
+  ntp=1,          ! isotropic barostat
+  barostat=1,     ! berendsen barostat
+  pres0=1.0,      ! pressure at 1 bar
+  taup=2.0,       ! pressure coupling constant 
+  cut=8.0,        ! PME cutoff
+  ntb=2,          ! PBCs with constant pressure
+  ntc=2,          ! constrain H-bonds with shake
+  ntf=2,          ! do not evaluate H-bonds force contribution
+  ig=-1,          ! random seeding
+  ntr=1,          ! restraints are on and are used to hold exterior of the protein stationary
+  restraintmask='(:1-121,221-254,265-385,485-518,529-649,749-782,793-913,1013-1046,1057-1177,1277-1310) & @CA',
+  restraint_wt=10 !10 kcal/mol/A2
+ &end
+~

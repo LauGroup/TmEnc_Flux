@@ -1,0 +1,8 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+mol = loadpdb [XXXX].pdb
+solvatebox mol TIP3PBOX 20  
+addions mol Na+ 0
+savepdb mol output.pdb
+saveamberparm mol Native.prmtop Native.crd
+quit
