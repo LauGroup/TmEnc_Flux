@@ -1,8 +1,0 @@
-source leaprc.protein.ff14SB
-source leaprc.water.tip3p
-mol = loadpdb M8_merge_single_15x_pore_norbf_cb_rot_proc.pdb 
-solvatebox mol TIP3PBOX 20  
-addions mol Na+ 0
-savepdb mol output.pdb
-saveamberparm mol M8.prmtop M8.crd
-quit

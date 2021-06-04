@@ -1,8 +1,0 @@
-source leaprc.protein.ff14SB
-source leaprc.water.tip3p
-mol = loadpdb M2_Final_biomt_merge_no_rbf_Zalign_noend_2_TER_proc_cb_rot_proc.pdb 
-solvatebox mol TIP3PBOX 20  
-addions mol Na+ 0
-savepdb mol output.pdb
-saveamberparm mol M2.prmtop M2.crd
-quit

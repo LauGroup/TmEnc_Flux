@@ -1,9 +1,0 @@
-parm P52_ions.prmtop
-loadCoordinates P52_ions.crd
-setOverwrite True
-printLJMatrix @TB
-printLJMatrix @Cl-
-add12_6_4 "@Cl-,TB" watermodel TIP3P
-printLJMatrix @TB
-printLJMatrix @Cl-
-outparm P52_ions_1264.prmtop

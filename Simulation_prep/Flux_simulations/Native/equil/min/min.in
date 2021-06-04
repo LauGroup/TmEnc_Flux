@@ -1,6 +1,0 @@
-min
- &cntrl
-  imin=1,
-  maxcyc=5000,
-  ntpr=5,
- &end

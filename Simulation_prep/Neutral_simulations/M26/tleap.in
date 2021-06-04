@@ -1,8 +1,0 @@
-source leaprc.protein.ff14SB
-source leaprc.water.tip3p
-mol = loadpdb M26_BioMT_Refine14_single_5x_pore_Zalign_proc.pdb 
-solvatebox mol TIP3PBOX 20  
-addions mol Na+ 0
-savepdb mol output.pdb
-saveamberparm mol M26.prmtop M26.crd
-quit
