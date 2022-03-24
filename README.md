@@ -9,7 +9,7 @@ MD trajectories and analysis scripts for:
 ```
 @article{R.2022,
 annote = {doi: 10.1126/sciadv.abl7346},
-author = {R., Adamson Lachlan S and Nuren, Tasneem and P., Andreas Michael and William, Close and N., Jenner Eric and N., Szyszka Taylor and Reginald, Young and Chen, Cheah Li and Alexander, Norman and I., MacDermott-Opeskin Hugo and L., O'Mara Megan and Frank, Sainsbury and W., Giessen Tobias and Heng, Lau Yu},
+author = {Adamson, Lachlan S. R. and Tasneem, Nuren and Andreas, Michael P. and Close, William and Jenner, Eric N. and Szyszka, Taylor N. and Young, Reginald and Cheah, Li Chen and Norman, Alexander and MacDermott-Opeskin, Hugo I. and O'Mara, Megan L. and Sainsbury, Frank and Giessen, Tobias W. and Lau, Yu Heng},
 doi = {10.1126/sciadv.abl7346},
 journal = {Science Advances},
 month = {mar},
