@@ -2,7 +2,7 @@
 
 MD trajectories and analysis scripts for:
 
-R., A. L. S., Nuren, T., P., A. M., William, C., N., J. E., N., S. T., … Heng, L. Y. (2022). Pore structure controls stability and molecular flux in engineered protein cages. Science Advances, 8(5), eabl7346. https://doi.org/10.1126/sciadv.abl7346
+**Pore structure controls stability and molecular flux in engineered protein cages. Science Advances, 8(5), eabl7346. https://doi.org/10.1126/sciadv.abl7346**
 
 ## Citation
 
