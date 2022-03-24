@@ -1,0 +1,1 @@
+This folder contains the plasmid maps of the WT and mutant constructs with N-terminal LBT tags.
